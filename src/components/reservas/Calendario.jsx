@@ -102,7 +102,7 @@ export default function Calendario({ fechaSeleccionada, onSeleccionar }) {
             return (
               <div
                 key={iso}
-                className="p-3 text-center text-tertiary/40 cursor-not-allowed text-body-md"
+                className="p-3 rounded-lg border border-transparent text-center text-tertiary/40 cursor-not-allowed text-body-md"
               >
                 {fecha.getDate()}
               </div>
@@ -117,8 +117,8 @@ export default function Calendario({ fechaSeleccionada, onSeleccionar }) {
               aria-pressed={estaSeleccionada}
               className={
                 estaSeleccionada
-                  ? 'p-3 rounded-lg font-bold bg-primary-container text-on-primary-container shadow-[0_0_15px_rgba(255,87,26,0.3)] transition-all'
-                  : 'p-3 rounded-lg bg-surface border border-surface-variant hover:border-primary hover:text-primary transition-all'
+                  ? 'p-3 rounded-lg border border-primary-container font-bold bg-primary-container text-on-primary-container shadow-[0_0_15px_rgba(255,87,26,0.3)] transition-all'
+                  : 'p-3 rounded-lg border border-surface-variant bg-surface hover:border-primary hover:text-primary transition-all'
               }
             >
               {fecha.getDate()}

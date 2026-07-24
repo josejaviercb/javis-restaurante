@@ -256,7 +256,7 @@ function ModalEditarMiReserva({ reserva, onCerrar, onGuardado }) {
   };
 
   return (
-    <Modal abierto titulo="Editar reserva" onCerrar={onCerrar} ancho="max-w-3xl">
+    <Modal abierto titulo="Editar reserva" onCerrar={onCerrar} ancho="max-w-4xl">
       <form onSubmit={manejarEnvio} className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Calendario fechaSeleccionada={fecha} onSeleccionar={seleccionarFecha} />
