@@ -79,15 +79,8 @@ export default function Inicio() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Overlays: oscurecen la imagen para legibilidad y tiñen con la marca */}
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,107,53,0.25),transparent_55%)]"
-          aria-hidden="true"
-        />
+        {/* Capa negra semitransparente para dar legibilidad al texto */}
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
         <div className="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
