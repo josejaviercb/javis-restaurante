@@ -102,7 +102,7 @@ export default function Calendario({ fechaSeleccionada, onSeleccionar }) {
             return (
               <div
                 key={iso}
-                className="p-3 text-center text-surface-variant cursor-not-allowed text-body-md"
+                className="p-3 text-center text-tertiary/40 cursor-not-allowed text-body-md"
               >
                 {fecha.getDate()}
               </div>
