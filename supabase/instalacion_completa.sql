@@ -201,7 +201,29 @@ declare
   v_zona text := 'America/Lima';
   v_ahora_local timestamp := (now() at time zone v_zona);
   v_momento_reserva timestamp;
+  v_es_solo_cancelacion boolean;
 begin
+  -- Un cliente (no administrador) siempre puede cancelar una reserva
+  -- pendiente o confirmada. Pero editar cualquier otro dato (fecha,
+  -- franja, personas, contacto, notas...) solo es posible mientras la
+  -- reserva siga 'pendiente'. El administrador conserva control total.
+  if tg_op = 'UPDATE' and not public.es_admin() and old.estado <> 'pendiente' then
+    v_es_solo_cancelacion :=
+      new.estado = 'cancelada'
+      and new.fecha = old.fecha
+      and new.franja = old.franja
+      and new.personas = old.personas
+      and new.nombre_contacto = old.nombre_contacto
+      and coalesce(new.telefono_contacto, '') = coalesce(old.telefono_contacto, '')
+      and coalesce(new.notas, '') = coalesce(old.notas, '');
+
+    if not v_es_solo_cancelacion then
+      raise exception
+        'Esta reserva ya no se puede modificar: solo se permite cancelarla.'
+        using errcode = 'check_violation';
+    end if;
+  end if;
+
   -- Una reserva cancelada nunca ocupa plazas.
   if new.estado = 'cancelada' then
     return new;

@@ -7,15 +7,22 @@ import {
   esFechaPasada,
 } from '../../lib/formato';
 
-export default function ReservaCard({ reserva, onCancelar }) {
+export default function ReservaCard({ reserva, onCancelar, onEditar }) {
   const cancelada = reserva.estado === 'cancelada';
   const pasada = esFechaPasada(reserva.fecha);
   // Solo tiene sentido cancelar una reserva futura que siga viva.
   const puedeCancelarse = !cancelada && !pasada;
+  // Editar los datos solo es posible mientras la reserva siga pendiente.
+  const puedeEditarse = reserva.estado === 'pendiente' && !pasada;
 
   const manejarCancelacion = (event) => {
     event.preventDefault();
     onCancelar(reserva);
+  };
+
+  const manejarEdicion = (event) => {
+    event.preventDefault();
+    onEditar(reserva);
   };
 
   return (
@@ -53,14 +60,27 @@ export default function ReservaCard({ reserva, onCancelar }) {
 
       <div className="flex items-center gap-6 justify-between md:justify-end">
         <BadgeEstado estado={reserva.estado} />
-        {puedeCancelarse ? (
-          <button
-            type="button"
-            onClick={manejarCancelacion}
-            className="text-error font-bold text-label-bold uppercase hover:underline transition-all"
-          >
-            Cancelar
-          </button>
+        {puedeEditarse || puedeCancelarse ? (
+          <div className="flex items-center gap-4">
+            {puedeEditarse ? (
+              <button
+                type="button"
+                onClick={manejarEdicion}
+                className="text-primary font-bold text-label-bold uppercase hover:underline transition-all"
+              >
+                Editar
+              </button>
+            ) : null}
+            {puedeCancelarse ? (
+              <button
+                type="button"
+                onClick={manejarCancelacion}
+                className="text-error font-bold text-label-bold uppercase hover:underline transition-all"
+              >
+                Cancelar
+              </button>
+            ) : null}
+          </div>
         ) : (
           <span className="text-surface-variant font-bold text-label-bold uppercase">
             Sin acciones
