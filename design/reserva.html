@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SMASH BROS BURGER | Reservas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb59e",
+                        "tertiary-container": "#929090",
+                        "tertiary": "#c8c6c5",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c6c7",
+                        "on-primary-fixed-variant": "#852400",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-bright": "#393939",
+                        "on-primary-fixed": "#3a0b00",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3131",
+                        "secondary-container": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary": "#303030",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-tint": "#ffb59e",
+                        "on-surface-variant": "#e6beb2",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#2a2a2a",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#ffdbd0",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#5c4037",
+                        "on-primary": "#5e1700",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#ae3200",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "primary-container": "#ff571a",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b4b5b5",
+                        "surface-container": "#201f1f",
+                        "background": "#131313",
+                        "on-primary-container": "#521300",
+                        "primary": "#ffb59e",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#ad897e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Anton"],
+                        "label-bold": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Anton"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .active-day {
+            background-color: #ff571a;
+            color: #521300;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffb59e;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b-2 border-surface-variant">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg-mobile tracking-tighter text-primary dark:text-primary-fixed-dim">
+                SMASH BROS BURGER
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">INICIO</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">MENÚ</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">RESERVAS</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">ADMIN</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-bold active:scale-95 transition-transform">
+                ORDENAR
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4 uppercase">Reserva tu Mesa</h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-2xl">
+                Asegura tu sitio en el templo del smash. Elige el momento perfecto para disfrutar de la brutalidad artesanal.
+            </p>
+</header>
+<!-- Bento Grid Layout for Booking -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Step 1: Calendar & People (Bento Item) -->
+<div class="lg:col-span-8 space-y-gutter">
+<div class="bg-surface-container-high border-2 border-surface-variant rounded-xl p-8">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">1. SELECCIONA FECHA Y PERSONAS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Custom Modern Calendar UI -->
+<div class="space-y-4">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-label-bold">OCTUBRE 2024</span>
+<div class="flex gap-4">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-label-sm text-tertiary mb-2">
+<div>LU</div><div>MA</div><div>MI</div><div>JU</div><div>VI</div><div>SA</div><div>DO</div>
+</div>
+<div class="grid grid-cols-7 gap-2">
+<!-- Calendar Days -->
+<div class="p-3 text-surface-variant cursor-not-allowed">28</div>
+<div class="p-3 text-surface-variant cursor-not-allowed">29</div>
+<div class="p-3 text-surface-variant cursor-not-allowed">30</div>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">1</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">2</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">3</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">4</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">5</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">6</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">7</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">8</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">9</button>
+<button class="p-3 active-day font-bold rounded-lg shadow-[0_0_15px_rgba(255,87,26,0.3)]">10</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">11</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">12</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">13</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">14</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">15</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">16</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">17</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">18</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">19</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">20</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">21</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">22</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">23</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">24</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">25</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">26</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">27</button>
+<button class="p-3 bg-surface border border-surface-variant hover:border-primary transition-all rounded-lg">28</button>
+</div>
+</div>
+<!-- Number of People -->
+<div class="space-y-6">
+<label class="block font-label-bold text-on-surface uppercase tracking-widest">Número de Personas</label>
+<div class="grid grid-cols-4 gap-3">
+<button class="py-4 bg-surface border-2 border-primary text-primary font-bold rounded-lg transition-all">1</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">2</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">3</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">4</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">5</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">6</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">7</button>
+<button class="py-4 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary transition-all rounded-lg">8+</button>
+</div>
+<div class="p-4 bg-surface border-l-4 border-primary mt-8">
+<p class="text-label-sm text-tertiary">Para reservas de más de 8 personas, por favor contáctanos directamente por teléfono.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Time Slots -->
+<div class="bg-surface-container-high border-2 border-surface-variant rounded-xl p-8">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">2. Elige Franja Horaria</h2>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="font-label-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">restaurant</span> COMIDA
+                            </h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">13:30</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">14:00</button>
+<button class="px-6 py-3 bg-surface border-2 border-primary text-primary rounded-lg transition-all font-label-bold">14:30</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">15:00</button>
+<button class="px-6 py-3 bg-surface/30 border-2 border-surface-variant text-surface-variant cursor-not-allowed rounded-lg font-label-bold">15:30</button>
+</div>
+</div>
+<div>
+<h3 class="font-label-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">dark_mode</span> CENA
+                            </h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">20:30</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">21:00</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">21:30</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">22:00</button>
+<button class="px-6 py-3 bg-surface border-2 border-surface-variant hover:border-primary hover:text-primary rounded-lg transition-all font-label-bold">22:30</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary & Confirmation (Floating Sidebar Style) -->
+<aside class="lg:col-span-4 h-fit sticky top-24">
+<div class="bg-surface-container-highest border-2 border-primary rounded-xl overflow-hidden">
+<div class="h-32 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A macro shot of a delicious, juicy smash burger with melted cheese and crispy edges, captured in dramatic high-contrast lighting with warm ember tones and deep shadows, representing the premium urban brutalist aesthetic of the restaurant." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBW509ObKpDcJy5NPGADUr67hlJRmfjU_X7oDwhMWret4muC3f0RayDyWtsaJ3P_XjiYus1jQqSAoOWxqNqyIAbgbPm-35xmM0odPgwDMDclSi1T71LC7w9Yr-dqKkZc3xviGCz8i3iHP0qSubZF64ltHxJPi4b4i6vovYpEtloNLvfhsNToRAvpuHDS2G5oAp-QAw-xLT3oPiPjWQOXHBUxiPeZipd2mJ9qsOpNDrRztysyE5XNneGTlPrHO20jQu3pwsiBb4g0kBh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest to-transparent"></div>
+</div>
+<div class="p-8 space-y-8">
+<h3 class="font-headline-md text-headline-md text-primary">RESUMEN</h3>
+<div class="space-y-4 border-b border-surface-variant pb-6">
+<div class="flex justify-between items-center">
+<span class="text-tertiary">Fecha:</span>
+<span class="font-label-bold">10 de Octubre, 2024</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-tertiary">Hora:</span>
+<span class="font-label-bold">14:30</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-tertiary">Invitados:</span>
+<span class="font-label-bold">1 persona</span>
+</div>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">NOMBRE COMPLETO</label>
+<input class="w-full bg-surface border-2 border-surface-variant focus:border-primary text-on-surface px-4 py-3 rounded-lg outline-none transition-all" type="text" value="ALEX MARTÍNEZ"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">TELÉFONO</label>
+<input class="w-full bg-surface border-2 border-surface-variant focus:border-primary text-on-surface px-4 py-3 rounded-lg outline-none transition-all" type="tel" value="+34 600 000 000"/>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary-container font-label-bold py-4 rounded-lg uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all" type="submit">
+                                    CONFIRMAR RESERVA
+                                </button>
+</div>
+</form>
+</div>
+</div>
+</aside>
+</div>
+<!-- Section: My Reservations -->
+<section class="mt-24">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">MIS RESERVAS</h2>
+<p class="text-tertiary">Gestiona tus próximas visitas y revisa tu historial.</p>
+</div>
+<div class="flex gap-4">
+<button class="font-label-bold text-primary border-b-2 border-primary px-2 pb-1">PRÓXIMAS</button>
+<button class="font-label-bold text-tertiary hover:text-on-surface transition-colors px-2 pb-1">PASADAS</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Reservation Card 1: Confirmed -->
+<div class="bg-surface-container border-2 border-surface-variant rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-surface-variant flex flex-col items-center justify-center rounded-lg">
+<span class="text-label-sm font-bold text-primary uppercase">OCT</span>
+<span class="text-headline-md leading-none">10</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg">Smash Bros Central</h4>
+<p class="text-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 14:30 • 1 Persona
+                            </p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 bg-primary/10 text-primary px-4 py-1 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-xs uppercase">Confirmada</span>
+</div>
+<button class="text-error font-label-bold text-xs uppercase hover:underline">Cancelar</button>
+</div>
+</div>
+<!-- Reservation Card 2: Cancelled -->
+<div class="bg-surface-container/50 border-2 border-surface-variant/50 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 opacity-60">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-surface-variant/50 flex flex-col items-center justify-center rounded-lg">
+<span class="text-label-sm font-bold text-tertiary uppercase">SEP</span>
+<span class="text-headline-md leading-none">24</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg">Smash Bros Central</h4>
+<p class="text-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 21:00 • 4 Personas
+                            </p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 bg-error/10 text-error px-4 py-1 rounded-full border border-error/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">cancel</span>
+<span class="font-label-bold text-xs uppercase">Cancelada</span>
+</div>
+<span class="text-surface-variant font-label-bold text-xs uppercase">Sin acciones</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-4 border-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 max-w-container-max mx-auto gap-8">
+<div class="font-headline-lg text-headline-lg text-on-surface">
+                SMASH BROS
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-tertiary hover:text-primary-fixed transition-colors" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary-fixed transition-colors" href="#">Términos</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary-fixed transition-colors" href="#">Contacto</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary-fixed transition-colors" href="#">Instagram</a>
+</div>
+<div class="font-body-md text-body-md text-tertiary text-center md:text-right">
+                © 2024 SMASH BROS BURGER. BRUTALISMO PURO.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple Calendar Logic Mockup
+        const days = document.querySelectorAll('.grid-cols-7 button');
+        days.forEach(day => {
+            day.addEventListener('click', () => {
+                days.forEach(d => {
+                    d.classList.remove('active-day', 'font-bold', 'shadow-[0_0_15px_rgba(255,87,26,0.3)]');
+                    d.classList.add('bg-surface', 'border', 'border-surface-variant');
+                });
+                day.classList.add('active-day', 'font-bold', 'shadow-[0_0_15px_rgba(255,87,26,0.3)]');
+                day.classList.remove('bg-surface', 'border', 'border-surface-variant');
+            });
+        });
+
+        // Simple Guests Logic Mockup
+        const guestBtns = document.querySelectorAll('.grid-cols-4 button');
+        guestBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                guestBtns.forEach(b => {
+                    b.classList.remove('border-primary', 'text-primary', 'font-bold');
+                    b.classList.add('border-surface-variant');
+                });
+                btn.classList.add('border-primary', 'text-primary', 'font-bold');
+                btn.classList.remove('border-surface-variant');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,123 @@
+@import '@fontsource/anton/400.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Base de 10px para poder trabajar con rem de forma directa (1rem = 10px). */
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-on-background font-body text-body-md;
+    @apply selection:bg-primary-container selection:text-on-primary-container;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-headline;
+  }
+
+  /* Anula el autofill azulado del navegador para mantener la estética oscura. */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #f5f5f0;
+    -webkit-box-shadow: 0 0 0 1000px #0e0e10 inset;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0e0e10;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2e;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6b35;
+  }
+
+  :focus-visible {
+    outline: 2px solid #ff6b35;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Borde elegante: fino, sutil y con esquinas redondeadas. Se conserva
+     el nombre 'brutalist-border' para no tocar los componentes que ya lo usan. */
+  .brutalist-border {
+    @apply border border-on-surface/10 shadow-lg shadow-black/20;
+  }
+
+  .brutalist-border-active {
+    @apply border border-primary shadow-lg shadow-primary/20;
+  }
+
+  .glass-header {
+    background: rgba(14, 14, 16, 0.75);
+    backdrop-filter: blur(20px);
+  }
+
+  .glass-card {
+    background: rgba(26, 26, 30, 0.6);
+    backdrop-filter: blur(12px);
+    @apply border border-on-surface/10;
+  }
+
+  /* Botón principal naranja, el CTA de la marca. */
+  .btn-primario {
+    @apply bg-primary text-on-primary px-8 py-4 rounded-xl;
+    @apply font-bold text-label-bold uppercase tracking-widest;
+    @apply shadow-lg shadow-primary/20 hover:brightness-110 hover:shadow-primary/30 active:scale-95 transition-all;
+    @apply disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:brightness-100 disabled:active:scale-100;
+  }
+
+  .btn-secundario {
+    @apply bg-surface-container-high text-on-surface px-8 py-4 rounded-xl;
+    @apply border border-on-surface/15;
+    @apply font-bold text-label-bold uppercase tracking-widest;
+    @apply hover:border-primary hover:text-primary active:scale-95 transition-all;
+    @apply disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-peligro {
+    @apply bg-transparent text-error px-6 py-3 rounded-xl border border-error/40;
+    @apply font-bold text-label-bold uppercase tracking-wider;
+    @apply hover:bg-error/10 hover:border-error active:scale-95 transition-all;
+  }
+
+  .campo-formulario {
+    @apply w-full bg-surface border border-on-surface/15 text-on-surface;
+    @apply px-4 py-3 rounded-xl outline-none transition-colors;
+    @apply focus:border-primary placeholder:text-tertiary/50;
+  }
+
+  .etiqueta-formulario {
+    @apply block font-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-2;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

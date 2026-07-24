@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SMASH BROS BURGER | MENÚ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb59e",
+                        "tertiary-container": "#929090",
+                        "tertiary": "#c8c6c5",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c6c7",
+                        "on-primary-fixed-variant": "#852400",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-bright": "#393939",
+                        "on-primary-fixed": "#3a0b00",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3131",
+                        "secondary-container": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary": "#303030",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-tint": "#ffb59e",
+                        "on-surface-variant": "#e6beb2",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#2a2a2a",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#ffdbd0",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#5c4037",
+                        "on-primary": "#5e1700",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#ae3200",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "primary-container": "#ff571a",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b4b5b5",
+                        "surface-container": "#201f1f",
+                        "background": "#131313",
+                        "on-primary-container": "#521300",
+                        "primary": "#ffb59e",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#ad897e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Anton"],
+                        "label-bold": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Anton"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .brutalist-border {
+            border: 2px solid #353534;
+        }
+        .active-border {
+            border-color: #ff571a;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff571a;
+        }
+        .category-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-b-2 border-surface-variant glass-nav">
+<div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<h1 class="font-headline-lg-mobile md:font-headline-lg tracking-tighter text-primary">SMASH BROS BURGER</h1>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">INICIO</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">MENÚ</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">RESERVAS</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">ADMIN</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-bold active:scale-95 transition-transform">
+                ORDENAR
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-16">
+<div class="relative overflow-hidden brutalist-border rounded-xl p-8 md:p-12 bg-surface-container-low mb-12">
+<div class="relative z-10">
+<span class="inline-block bg-primary-container text-on-primary-container px-3 py-1 font-label-bold text-xs mb-4 uppercase">Brutalismo Puro</span>
+<h2 class="font-headline-xl text-4xl md:text-headline-xl uppercase leading-none mb-6">Nuestra Carta</h2>
+<p class="font-body-lg text-tertiary max-w-2xl">Carne smash de calidad premium, ingredientes frescos y ese toque callejero que nos define. Elige tu arma y prepárate para el KO.</p>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-10 rotate-12 select-none pointer-events-none">
+<span class="font-headline-xl text-[240px] leading-none">SMASH</span>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-4 overflow-x-auto category-scroll pb-4">
+<button class="category-btn active bg-primary text-on-primary border-2 border-primary px-8 py-3 font-label-bold whitespace-nowrap transition-all" onclick="filterCategory('all')">TODOS</button>
+<button class="category-btn bg-surface-container text-on-surface-variant border-2 border-surface-variant px-8 py-3 font-label-bold whitespace-nowrap hover:border-primary transition-all" onclick="filterCategory('entradas')">ENTRADAS</button>
+<button class="category-btn bg-surface-container text-on-surface-variant border-2 border-surface-variant px-8 py-3 font-label-bold whitespace-nowrap hover:border-primary transition-all" onclick="filterCategory('hamburguesas')">HAMBURGUESAS</button>
+<button class="category-btn bg-surface-container text-on-surface-variant border-2 border-surface-variant px-8 py-3 font-label-bold whitespace-nowrap hover:border-primary transition-all" onclick="filterCategory('postres')">POSTRES</button>
+<button class="category-btn bg-surface-container text-on-surface-variant border-2 border-surface-variant px-8 py-3 font-label-bold whitespace-nowrap hover:border-primary transition-all" onclick="filterCategory('bebidas')">BEBIDAS</button>
+</div>
+</header>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="menu-grid">
+<!-- Entradas -->
+<div class="menu-item group" data-category="entradas">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro photography shot of crispy golden loaded fries topped with melted cheddar cheese, chopped jalapeños, and crispy bacon bits. The lighting is dramatic and warm, emphasizing the textures of the melted cheese. The background is a dark, moody industrial kitchen setting with a Modern Brutalist aesthetic, using deep charcoals and pops of Flame Orange." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjC-5-HGl-r02YYUujbIHxLK5CzXKeUj3XFppnwnqN4ts3kfzyr_vJ4BPojUN-cGzTfDE1dfVq3POeWHL8bSI0E4-Dr6Q-UvOn-n6ffRmB57rPIUHbP1Tpah_b1H-K5pVPQ7osDz-Vlkp4IR3p4-3ihxVihHQohtTBLWUGovxTUcwQLNIsWj1gGTpGpKSfCE3VVoTYx_DLWh4DGuQW8p3HHoPXTeYb_oFBiBd-7jvSGqkod7NbgTR4lydsJR6TqOd8LMWEH0i2lIEA"/>
+<div class="absolute top-4 left-4">
+<span class="bg-black text-white text-[10px] font-label-bold px-2 py-1 brutalist-border">POPULAR</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">Loaded Smash Fries</h3>
+<span class="font-body-lg text-primary font-bold">8.50€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">Patatas fritas caseras con doble ración de queso fundido, bacon crujiente, cebollino y nuestra salsa secreta Smash.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+<!-- Hamburguesas -->
+<div class="menu-item group" data-category="hamburguesas">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of a double smash burger with perfectly caramelized edges, two layers of molten American cheese, pickles, and thinly sliced onions on a toasted brioche bun. The shot is high-contrast with vibrant Flame Orange cheese against a deep charcoal background. Professional food styling, sharp focus on the meat texture, cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV5_fa8chW8jyXAwdbUTkWK-OEt0R-S0_C9nxoEscOyyBCV1hUy-sgO4SeAetV0M7-BUnFTEumZJD_cDdDaX_AfU6S87OVh8zBFt_7iJ3YfBx_1K3PYTIaHRTMYfSOx_NN1Y4ESHj527WaRFR991gQNBO0lTgQVE-v5ZmKd2tAw5VzRMLDSdaqlYUj8Nt8B0a1aMlKHHAwvHRMZYrxaxddaVIquUTG2FG3OzEJMO2r14klxFLOPArDRarmFfXfaEkMa_7gZqRcRMdG"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-label-bold px-2 py-1 brutalist-border uppercase">Best Seller</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">Double OG Smash</h3>
+<span class="font-body-lg text-primary font-bold">12.90€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">2 patties de 100g, doble queso americano, pepinillos, cebolla picada y mostaza en pan brioche artesano.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+<div class="menu-item group" data-category="hamburguesas">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A massive triple smash burger featuring spicy jalapeños, pepper jack cheese, and a fiery red sauce dripping from the edges. The lighting is intense and moody, creating deep shadows. Set in an urban, high-end industrial environment. The burger is the focal point with vibrant, high-chroma orange and red tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1daCMXAKtHYFI10YxIE7Mxcu_nmlcZiHzLLAE35O1ruLnI34chJkYg769GDDGbjIvNaiJn_AcgGeRwhSCrNwOV9GS4NyQTZe6F0Bi0QCDodZVH4XuXQEEikyngQFKmNOJEHQScaeHhHn-c2Que1VtSqUc3IPPDcPANBsYL5CYYxhEIMANKcHxZ-ebrk0TSxcYLrNz46uNI174Dtw5OOkiUNp9gFGCm1wQ4GDs9WlBtxXcnGzqXnGSfWKzqG4xJh3o1yszkxkjWRfV"/>
+<div class="absolute top-4 left-4">
+<span class="bg-error text-on-error text-[10px] font-label-bold px-2 py-1 brutalist-border uppercase">Spicy</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">The Inferno Smash</h3>
+<span class="font-body-lg text-primary font-bold">14.50€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">Tres carnes, jalapeños frescos, queso pepper jack y nuestra salsa picante Inferno. No apta para cobardes.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+<!-- Postres -->
+<div class="menu-item group" data-category="postres">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A decadent dark chocolate lava cake with a molten center being broken by a spoon. Rich chocolate ganache flows out. Topped with a dusting of gold leaf for a premium touch. The setting is a dark, high-contrast studio shot with soft white key lighting highlighting the glossy chocolate texture. Brutalist charcoal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbJu-GFsIDLqjNxqWmz6uI47o5-Jmj72Inymh_K-V98gNaZs1HzVtX5Qx7ZyJOEWJMenhZVEY2LCrMqjrjIm6JazJDsptnucGLgOpBO849593KruyU5NLfRcNiivs8wFS_3Vbhf6yuthX-MeiEQWBGbJHgrt09A14sYClHCDwnsB5Hp3_I5b3lHjLcW8IN1AeOnUu7b-Vb4GsgqaQP2zI_HDJXORw89to4sfceJUmqvRUfEPxVfLk0O37fA4UQ1RKfRdSzh0wxowo9"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">Lava Smash Cake</h3>
+<span class="font-body-lg text-primary font-bold">7.00€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">Coulant de chocolate negro 70% con corazón fundente, acompañado de helado de vainilla de Madagascar.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+<!-- Bebidas -->
+<div class="menu-item group" data-category="bebidas">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A tall, frosty glass of craft IPA beer with a thick white foam head. Condensation droplets cover the glass. The beer has a vibrant amber color. The background is a blurred, dark urban bar setting with neon accents. High-contrast lighting captures the bubbles and the texture of the frost." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5b6MZB2h_1KLzklhMcCI5uh4AwrB-WtFhEVXlzpdJVwgEGghVzDceTJtF2vDUplgsORzqljJmcDc02heBO8LRvLj1otHMf4TH3l2Oq3ZQ4-7u8pAPoVOW5O2fTy7fq6PoxFBy7D-opv4CDIJ45wdrEyDpo74yF7OEUwlvZwhxeJmNw3O8rIeE7mbUr5qdGP_NuMJok502egtQw3LEps8qyfFLwXeLzvu3RYIVXy4flK13TaGDDA3ltju6mThGSfiPXoh1FpONYKvS"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">Craft Smash IPA</h3>
+<span class="font-body-lg text-primary font-bold">5.50€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">Cerveza artesana local, notas cítricas y amargor equilibrado. Maridaje perfecto para nuestras hamburguesas.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+<!-- Veggie Option -->
+<div class="menu-item group" data-category="hamburguesas">
+<div class="bg-surface-container-low rounded-xl brutalist-border overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A gourmet plant-based burger with a grilled mushroom and beet patty, smashed avocado, sprouts, and vegan aioli. The burger looks juicy and flavorful. Vibrant greens contrast against the dark charcoal and flame orange brand colors. Minimalist urban setting, bright top lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIgSv-yXSGLBMkx_HYegey4u4PQi4d6w3X9KzfBHzPqQSVlKRkjpBuQqlb113CouCnjeXSgFMjgQS-yYKO9putVr6CgLpp62g4LK8ZrzgTK2W1HXu5QOEtvZLG9MDbVNWrJKhIoLmlL_wUe7ATRHLLCKwpzwUecfnK9tDxMSvfRvYbie99lSkM43uKh3lbHzzRB9swQN8tOtq3dofrziICdfpCkjpHeVOFx6JccmbW5TTu8K-iMEZWQ2WpOyTMokgOPOVPSkAPNZsl"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-label-bold px-2 py-1 brutalist-border uppercase">Vegan</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-2xl uppercase">Green Power Smash</h3>
+<span class="font-body-lg text-primary font-bold">13.20€</span>
+</div>
+<p class="text-tertiary text-sm font-body-md mb-6 flex-grow">Beyond Meat smashed, queso vegano, aguacate, brotes frescos y salsa alioli de soja.</p>
+<button class="w-full py-3 bg-surface border-2 border-surface-variant hover:border-primary font-label-bold transition-all active:scale-95">AÑADIR AL PEDIDO</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t-4 border-primary bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">SMASH BROS</h2>
+<p class="font-body-md text-body-md text-tertiary mt-2">© 2024 SMASH BROS BURGER. BRUTALISMO PURO.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="font-body-md text-body-md text-tertiary hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary transition-colors" href="#">Términos</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary transition-colors" href="#">Contacto</a>
+<a class="font-body-md text-body-md text-tertiary hover:text-primary transition-colors" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-on-primary', 'border-primary');
+                btn.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-surface-variant');
+            });
+            
+            event.currentTarget.classList.add('active', 'bg-primary', 'text-on-primary', 'border-primary');
+            event.currentTarget.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-surface-variant');
+
+            // Filter items with simple scale animation
+            items.forEach(item => {
+                item.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 400);
+                }
+            });
+        }
+
+        // Micro-interaction for Order buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function() {
+                this.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', function() {
+                this.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>
