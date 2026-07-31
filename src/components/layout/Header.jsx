@@ -9,6 +9,7 @@ const ENLACES = [
   { a: '/', texto: 'Inicio' },
   { a: '/carta', texto: 'Menú' },
   { a: '/reservas', texto: 'Reservas' },
+  { a: '/info', texto: 'Info' },
 ];
 
 export default function Header() {

@@ -35,6 +35,18 @@ export default function Footer() {
           <Icono nombre="lugar" className="w-8 h-8" />
         </div>
       </div>
+
+      <p className="text-body-md text-tertiary text-center mt-10">
+        Desarrollado por{' '}
+        <a
+          href="https://javiercb.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:brightness-125 transition-all font-bold"
+        >
+          Javier Contreras
+        </a>
+      </p>
     </footer>
   );
 }

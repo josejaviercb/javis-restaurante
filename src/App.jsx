@@ -6,6 +6,7 @@ import AdminRoute from './routes/AdminRoute';
 
 import Inicio from './pages/public/Inicio';
 import Carta from './pages/public/Carta';
+import Info from './pages/public/Info';
 import Reservas from './pages/public/Reservas';
 import MisReservas from './pages/public/MisReservas';
 import MiPerfil from './pages/public/MiPerfil';
@@ -27,6 +28,7 @@ export default function App() {
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Inicio />} />
         <Route path="/carta" element={<Carta />} />
+        <Route path="/info" element={<Info />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/sin-permiso" element={<SinPermiso />} />
