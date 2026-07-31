@@ -87,7 +87,7 @@ export default function AdminCarta() {
             Gestión de la carta
           </h1>
           <p className="text-body-lg text-tertiary">
-            Personaliza los ingredientes del éxito de Javi's.
+            Personaliza los ingredientes del éxito de Snakko.
           </p>
         </div>
         <button

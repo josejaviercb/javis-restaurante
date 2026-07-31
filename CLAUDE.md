@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Proyecto
-Aplicación Web de Reservas y Carta Editable para un Restaurante (Smash Bros Burger)
+Aplicación Web de Reservas y Carta Editable para un Restaurante (Snakko)
 
 ## Rol del Agente
 Desarrollador web con 15 años de experiencia

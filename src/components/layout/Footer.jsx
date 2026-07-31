@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="flex flex-col items-center md:items-start gap-3">
           <p className="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface leading-none">
-            JAVI'S
+            SNAKKO
           </p>
           <p className="text-body-md text-tertiary text-center md:text-left">
-            © {new Date().getFullYear()} Javi's. Como en casa, pero mejor.
+            © {new Date().getFullYear()} Snakko. Como en casa, pero mejor.
           </p>
         </div>
 

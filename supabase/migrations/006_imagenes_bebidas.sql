@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Imágenes de las bebidas sin foto
+-- Snakko — Imágenes de las bebidas sin foto
 --
 -- 'Limonada de la Casa' y 'Refresco Artesano' se crearon sin imagen
 -- porque los mockups del diseño no incluían fotos de bebidas sin

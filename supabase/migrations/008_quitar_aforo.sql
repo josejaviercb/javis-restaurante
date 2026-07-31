@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Eliminación del límite de aforo
+-- Snakko — Eliminación del límite de aforo
 --
 -- Se retira el tope de comensales por franja: las reservas ya no se
 -- rechazan por capacidad y ninguna franja aparece como completa.

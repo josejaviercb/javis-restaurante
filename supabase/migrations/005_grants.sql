@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Privilegios de tabla (GRANT)
+-- Snakko — Privilegios de tabla (GRANT)
 --
 -- Postgres exige DOS capas de permisos y hacen falta ambas:
 --   1. GRANT  -> decide si el rol puede tocar la tabla siquiera.

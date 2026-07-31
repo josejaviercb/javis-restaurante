@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Funciones y triggers
+-- Snakko — Funciones y triggers
 -- Aforo, disponibilidad, creación automática de perfil y helper de rol.
 -- =====================================================================
 

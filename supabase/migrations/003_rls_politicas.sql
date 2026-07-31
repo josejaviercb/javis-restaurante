@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Row Level Security
+-- Snakko — Row Level Security
 -- Regla general: la carta es pública en lectura; todo lo demás está
 -- restringido al propio usuario o al rol administrador.
 -- =====================================================================

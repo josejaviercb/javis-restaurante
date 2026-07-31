@@ -43,7 +43,7 @@ export default function AdminLayout() {
     <div className="flex flex-col h-full p-6">
       <div className="mb-8">
         <Link to="/" className="font-headline text-3xl text-primary tracking-tighter leading-none">
-          JAVI'S
+          SNAKKO
         </Link>
         <p className="font-bold text-label-sm text-on-surface-variant uppercase opacity-70 mt-1">
           Panel de administración
@@ -104,7 +104,7 @@ export default function AdminLayout() {
       {/* Cabecera móvil */}
       <header className="lg:hidden sticky top-0 z-40 flex items-center justify-between px-margin-mobile py-4 bg-surface-container-low border-b-2 border-surface-variant">
         <Link to="/admin" className="font-headline text-2xl text-primary tracking-tighter">
-          JAVI'S
+          SNAKKO
         </Link>
         <button
           type="button"
@@ -141,7 +141,7 @@ export default function AdminLayout() {
               <p className="font-bold text-label-bold text-on-surface leading-tight">
                 {perfil?.nombre || 'Administrador'}
               </p>
-              <p className="text-label-sm text-primary">Javi's</p>
+              <p className="text-label-sm text-primary">Snakko</p>
             </div>
           </div>
         </div>

@@ -48,11 +48,11 @@ export default function Header() {
           to="/"
           onClick={cerrarMenu}
           className="flex items-center shrink-0"
-          aria-label="Javi's, ir a inicio"
+          aria-label="Snakko, ir a inicio"
         >
           <img
             src={logoHorizontal}
-            alt="Javi's"
+            alt="Snakko"
             className="h-10 md:h-14 w-auto object-contain"
           />
         </Link>

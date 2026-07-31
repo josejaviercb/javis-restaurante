@@ -120,7 +120,7 @@ export default function Inicio() {
             <div className="lg:col-span-7 flex justify-center lg:justify-end">
               <img
                 src={combo}
-                alt="Combo Javi's: hamburguesa, pollo broster y papas fritas"
+                alt="Combo Snakko: hamburguesa, pollo broster y papas fritas"
                 className="w-full max-w-[63rem] object-contain drop-shadow-2xl"
               />
             </div>
@@ -338,7 +338,7 @@ export default function Inicio() {
             ¿Tienes hambre de verdad?
           </h2>
           <p className="text-body-lg text-white/90 mb-10 max-w-2xl mx-auto">
-            Reserva tu mesa en menos de un minuto y asegúrate tu sitio en Javi's.
+            Reserva tu mesa en menos de un minuto y asegúrate tu sitio en Snakko.
           </p>
           <Link
             to="/reservas"

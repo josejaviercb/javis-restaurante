@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Políticas del bucket 'platos'
+-- Snakko — Políticas del bucket 'platos'
 --
 -- Ejecutar SOLO si el bucket se ha recreado desde el panel y aparece
 -- con 0 políticas. Al borrar un bucket se pierden sus políticas, y sin

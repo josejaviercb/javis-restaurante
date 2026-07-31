@@ -1,11 +1,11 @@
 -- =====================================================================
--- Smash Bros Burger — Script completo de instalación
+-- Snakko — Script completo de instalación
 -- Pega este fichero entero en el SQL Editor de Supabase y ejecútalo.
 -- Es idempotente: se puede ejecutar varias veces sin romper nada.
 -- =====================================================================
 
 -- =====================================================================
--- Smash Bros Burger — Esquema inicial
+-- Snakko — Esquema inicial
 -- Tablas: perfiles, secciones, platos, franjas_horarias, reservas
 -- =====================================================================
 
@@ -95,7 +95,7 @@ comment on table public.reservas is 'Reservas de mesa. El aforo por franja se va
 
 
 -- =====================================================================
--- Smash Bros Burger — Funciones y triggers
+-- Snakko — Funciones y triggers
 -- Aforo, disponibilidad, creación automática de perfil y helper de rol.
 -- =====================================================================
 
@@ -280,7 +280,7 @@ create trigger trg_validar_aforo
 
 
 -- =====================================================================
--- Smash Bros Burger — Row Level Security
+-- Snakko — Row Level Security
 -- Regla general: la carta es pública en lectura; todo lo demás está
 -- restringido al propio usuario o al rol administrador.
 -- =====================================================================
@@ -396,7 +396,7 @@ create policy "platos_imagenes_delete_admin" on storage.objects
 
 
 -- =====================================================================
--- Smash Bros Burger — Privilegios de tabla (GRANT)
+-- Snakko — Privilegios de tabla (GRANT)
 --
 -- Postgres exige DOS capas de permisos y hacen falta ambas:
 --   1. GRANT  -> decide si el rol puede tocar la tabla siquiera.
@@ -442,7 +442,7 @@ grant execute on function public.aforo_maximo() to anon, authenticated;
 
 
 -- =====================================================================
--- Smash Bros Burger — Políticas del bucket 'platos'
+-- Snakko — Políticas del bucket 'platos'
 --
 -- Ejecutar SOLO si el bucket se ha recreado desde el panel y aparece
 -- con 0 políticas. Al borrar un bucket se pierden sus políticas, y sin
@@ -650,7 +650,7 @@ where not exists (
 
 
 -- =====================================================================
--- Smash Bros Burger — Imágenes de las bebidas sin foto
+-- Snakko — Imágenes de las bebidas sin foto
 --
 -- 'Limonada de la Casa' y 'Refresco Artesano' se crearon sin imagen
 -- porque los mockups del diseño no incluían fotos de bebidas sin
@@ -673,7 +673,7 @@ where nombre = 'Refresco Artesano'
 
 
 -- =====================================================================
--- Smash Bros Burger — Eliminación del límite de aforo
+-- Snakko — Eliminación del límite de aforo
 --
 -- Se retira el tope de comensales por franja: las reservas ya no se
 -- rechazan por capacidad y ninguna franja aparece como completa.

@@ -1,5 +1,5 @@
 -- =====================================================================
--- Smash Bros Burger — Esquema inicial
+-- Snakko — Esquema inicial
 -- Tablas: perfiles, secciones, platos, franjas_horarias, reservas
 -- =====================================================================
 

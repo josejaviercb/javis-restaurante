@@ -137,14 +137,14 @@ export default function Reservas() {
                 Reserva tu mesa
               </h1>
               <p className="text-body-lg text-on-surface/80 max-w-2xl">
-                Asegura tu sitio en Javi's. Elige el momento perfecto para disfrutar de
+                Asegura tu sitio en Snakko. Elige el momento perfecto para disfrutar de
                 nuestras hamburguesas, pollo broster y papas fritas artesanales.
               </p>
             </div>
             <div className="hidden lg:flex lg:col-span-5 justify-end">
               <img
                 src={combo}
-                alt="Combo Javi's: hamburguesa, pollo broster y papas fritas"
+                alt="Combo Snakko: hamburguesa, pollo broster y papas fritas"
                 className="w-full max-w-md object-contain drop-shadow-2xl"
               />
             </div>

@@ -46,7 +46,7 @@ export default function ReservaCard({ reserva, onCancelar, onEditar }) {
         </div>
 
         <div>
-          <h3 className="font-bold text-body-lg text-on-surface">Javi's</h3>
+          <h3 className="font-bold text-body-lg text-on-surface">Snakko</h3>
           <p className="text-tertiary flex items-center gap-2 text-body-md">
             <Icono nombre="reloj" className="w-4 h-4 shrink-0" />
             {formatearHora(reserva.franja)} •{' '}
